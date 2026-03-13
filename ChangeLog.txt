@@ -1,6 +1,6 @@
 Version 1.0.7 Update
 --------------------
-- Added brand new Supplier Directory interface.
+- Added brand new Vendor Directory interface.
 - Integrated fully secure local License Key activation.
 - Removed dependency on Visual Studio Installer.
 - Performance improvements and bug fixes.
