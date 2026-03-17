@@ -1,3 +1,7 @@
+🚀 Auto Shop Pro - Changelog v1.1.2.1 (Bugfix)
+👤 Minor bug fix with user login
+
+---------------------------------------------------------------------
 🚀 Auto Shop Pro - Changelog v1.1.2 (The UX & Navigation Update)
 👤 New User Session Management
 Sidebar Profile Card: Added a sleek, dark-themed User Badge at the top of the navigation menu. It dynamically displays the logged-in employee’s name and system role.
@@ -29,101 +33,136 @@ Vector Icon Integration: Completed the removal of all text-based emojis in the V
 
 Toast Success Feedback: Integrated the new animation-driven notification system into the vehicle deletion and work order saving workflows.
 
-
-🚀 Auto Shop Manager Pro - Changelog v1.1.1 (The Network & Security Update)
 -------------------------------------------------------------------------------
+🚀 Auto Shop Manager Pro - Changelog v1.1.1 (The Network & Security Update)
+
 🔐 Security & User Management
 New Startup Login Screen: The application now launches to a secure, modern login screen requiring an employee selection and PIN.
+
 Role-Based Access Control (RBAC): Implemented strict UI permissions based on user roles:
-Admins have full access to the software.
-Service Writers can view inventory and build estimates, but cannot access the Financial Dashboard, Accounting Exports, or Shop Settings.
-Technicians are restricted to the Active Shop Board, Work Orders, and Vehicle History.
+---Admins have full access to the software.
+---Service Writers can view inventory and build estimates, but cannot access the Financial Dashboard, Accounting Exports, or Shop Settings.
+---Technicians are restricted to the Active Shop Board, Work Orders, and Vehicle History.
+
 Employee Management Dashboard: Added a new section inside Settings to create, edit, and delete employee accounts and assign roles.
+
 Touch-Friendly Security Pad: Replaced standard Windows password popups with a custom, ATM-style numeric touch pad. Includes an invisible keyboard listener so you can type on a physical NumPad without clicking.
+
 Secure Deletions: The Master Security Pad now protects the deletion of Customers, Work Orders, Parts, Labor Rates, and Database Restores.
 
 ✨ UI & User Experience (UX) Polish
 "Toast" Notifications: Replaced disruptive, screen-freezing "Save Successful" pop-ups with sleek, modern green/red banners that slide up from the bottom corner and auto-fade after 3 seconds.
+
 Modern Scrollbars: Ripped out the blocky legacy Windows scrollbars globally. Replaced them with slim, rounded, Mac/Web-style scrollbars that gently darken when hovered or dragged.
+
 Vector Icons Upgrade: Replaced all text-based emojis with professional, scalable vector icons (MahApps.Metro.IconPacks). The sidebar, delete buttons, edit buttons, and Quick-Add buttons now scale perfectly and match the color theme flawlessly.
+
 Empty State Watermarks: Empty lists (like a customer with no history or an empty search result) no longer show a blank white void. They now display a beautiful "No records found" watermark with a magnifying glass icon.
+
 Smart Editor Locking: The Work Order Editor (including the PDF Preview and Print buttons) is now completely disabled and locked down with a red warning until a vehicle is actively selected.
+
 Smart Check-In Flow: Checking a vehicle in directly from the Scheduling screen now triggers the dynamic "Mileage In" prompt properly, matching the "New Work Order" behavior.
 
 🛠️ Network & Database Stability
 Live Network Syncing: Implemented 15-second background refresh timers (DispatcherTimer) and read-only database tracking (.AsNoTracking()) across all major grids (Active Shop Board, Work Orders, Inventory, Customers). Screens now stay perfectly in sync across different computers without manual refreshing.
+
 Ghost Draft Eradication: Fixed an issue where backing out of a "New Work Order" left a blank ticket in the database. The software now actively sweeps and deletes abandoned ghost drafts.
+
 Phantom Lock Cleanup: The application now actively sweeps the database on startup to clear any stuck concurrency locks left behind by power outages or app crashes.
+
 "Split-Brain" Prevention: Added strict Network Guards to prevent laptops from silently creating fake local databases on their C: drive if they temporarily lose Wi-Fi connection to the master PC.
+
 Zombie Record Prevention: Fixed an issue where clicking a Work Order that was recently deleted by another computer resulted in a dead click.
 
-Version 1.1.0.2 Release Notes 3/15/2026 
-----------------------------------------
+-------------------------------------------------------------------------------
+🚀 Auto Shop Manager Pro - Changelog v1.1.0.2 Release Notes 3/15/2026 
+
 🛡️ Security & Licensing
 Fixed license check navigation lock.
 
-Version 1.1.0.1 Release Notes 3/15/2026 
-----------------------------------------
+-------------------------------------------------------------------------------
+🚀 Auto Shop Manager Pro - Changelog v1.1.0.1 Release Notes 3/15/2026 
+
 🛡️ Security & Licensing
 Updated license check on startup to pull from new location.
 
 ✨ Improvements & UI/UX
 Restored full screen no border start up
 
-Version 1.1.0 Release Notes 3/15/2026
----------------------------------------
+-------------------------------------------------------------------------------
+🚀 Auto Shop Manager Pro - Changelog v1.1.0 Release Notes 3/15/2026
+
 🎨 UI & Navigation Upgrades
 Streamlined Startup Flow: The application now immediately boots into the Active Shop Board instead of the analytics Dashboard, getting service writers right into the action the second the app opens.
+
 Sidebar Reorganization: The sidebar menu has been optimized for a live shop workflow. The Active Shop Board has been pinned to the very top for priority access.
+
 Analytics Tab: Renamed the "Dashboard" to Analytics and repositioned it directly above the Accounting tab to logically group your financial and reporting tools together.
 
 💻 Network & Multi-Workstation Support
 Local Area Network (LAN) Ready: The software can now be deployed across multiple computers in the shop. By dropping a simple db_network_config.txt file into the app data folder, extra workstations will automatically route their connection to a shared master database.
+
 Hardware License Decoupling: Rearchitected the licensing system. License keys are now stored locally on each physical machine rather than inside the shared database, allowing multiple activated PCs to read from the exact same shop data without overriding each other's activation keys.
+
 Database Collision Armor: Upgraded the SQLite connection pipeline with Cache=Shared and a 15-second busy timeout. If the Front Desk and the Shop Floor hit "Save" at the exact same millisecond, the software now intelligently forms a queue to prevent "Database Locked" crashes.
 
 📝 Work Order & Data Integrity
 Smart Mileage Prompts: When generating a brand new Repair Order, the editor now creates a dynamic pop-up asking the user to confirm or update the vehicle's incoming mileage, automatically highlighting the text for rapid data entry.
+
 Finalize Validation (Mileage Out): Added strict guardrails to the invoice finalization process. The system now actively checks the "Mileage Out" field. If it is blank, a pop-up forces the user to enter the departing mileage and will safely block the finalization process until a valid number is provided.
 
 ⏱️ Labor Catalog
 Quick Rate Overrides: Redesigned the Add/Edit Labor Rate window. The Hourly Rate box has been streamlined and now features a dedicated Pencil "Edit" button. Clicking the button instantly unlocks the field, changes the styling, and highlights the text so you can quickly override the shop's global default rate for specific specialized jobs.
 
-Version 1.0.9 Release Notes 3/14/2026
---------------------------------------
+-------------------------------------------------------------------------------
+🚀 Auto Shop Manager Pro - Changelog v1.0.9 Release Notes 3/14/2026
+
 📅 Scheduling & Appointments
 Smart Time Auto-Selection: The New Appointment window is now context-aware. When booking a same-day appointment, the system automatically calculates the current time, references your shop's operating hours, and intelligently snaps to the next available half-hour slot to save you from endless scrolling.
+
 Live Search Dropdowns: Upgraded the Customer/Vehicle selection menus with real-time text filtering. Typing a customer's name or vehicle make instantly narrows down massive databases for lightning-fast selection.
 
 📝 Work Order Management
 Seamless Invoice Finalization: Completely overhauled the invoice finalization pipeline. Finalizing a Work Order now instantly deducts inventory, locks the editor UI, and updates the status to "Invoiced" on-screen without requiring a forced page refresh or sending the user away from the document.
+
 Intelligent Date Validation: Hardened the Work Order date selectors. The system now physically prevents users from accidentally logging a "Date Out" (completion date) that occurs prior to the vehicle's "Date In".
+
 Universal Live Search: Brought the same rapid live-search text filtering to the Work Order editor, making it easier than ever to assign vehicles to new repair orders.
 
 📦 Inventory & Labor Catalog
 Quick-Add Inventory: Introduced a rapid "+1 Stock" button directly to the main Parts Catalog grid. This allows service writers to instantly receive and increment stock for common items (like oil filters or fluids) with a single click, completely bypassing the edit window.
+
 Catalog Deletion & Safety Locks: Shop managers can now permanently delete obsolete Parts and Labor rates from the master catalogs via a new trash can interface.
+
 Financial Integrity Protection: Added a strict background safety net to the deletion tool. The system actively scans past records and will automatically block the deletion of any Part or Labor code that is tied to a finalized historical invoice, ensuring your financial reporting is never corrupted.
 
-Version 1.0.8 Release Notes 3/13/2026
---------------------------------------
+-------------------------------------------------------------------------------
+🚀 Auto Shop Manager Pro - Changelog v1.0.8 Release Notes 3/13/2026
+
 🚀 New Features
 Shop Operating Hours: Added a comprehensive 7-day scheduling matrix to the Settings menu, allowing shop owners to define specific opening and closing times for each day of the week.
 
 ✨ Improvements & UI/UX
 Smart Appointment Scheduling: Completely overhauled the time-selection interface for new appointments. Manual time typing has been replaced with dynamic, 30-minute increment dropdown menus that automatically calculate the shop's open/close hours for the selected date.
+
 Calendar Agenda Navigation: Added "Go to Today" and "View All Upcoming" buttons to the Scheduling board to prevent visual confusion when booking appointments for future dates.
+
 Licensing Dashboard Redesign: Overhauled the Licensing section in Settings. It now features a dedicated "Activate" button, real-time visual status indicators, exact expiration date tracking, and a one-click support email link.
+
 Smart Dropdown Auto-Selection: When creating a new Customer from within the "Add Vehicle" window, the system now automatically finds and selects the newly created customer upon returning to the vehicle screen.
+
 Streamlined Update Prompts: The automatic updater now displays clean, professional release notes instead of routing users to the raw GitHub repository directory.
 
 🔧 Bug Fixes & Stability
 Strict Duplicate Prevention: Hardened the database entry points. The system now actively scans and blocks the creation of duplicate Vehicles (by VIN), Customers (by Name & Phone combination), and Inventory Parts (by Part Number).
+
 Relational Data Integrity: Removed the ability to permanently delete vehicles from the Active Vehicles list. This protects the database from corruption and prevents old Work Orders and Financial Records from becoming orphaned.
+
 "Snapshot Cache Trap" Resolved: Fixed a critical data-grid refresh issue where rapidly saving nested entries (Customer -> Vehicle -> Appointment) caused Entity Framework to display a stale cache. The UI now forces a hard disk read and flushes the SQLite connection pool instantly upon saving.
 
-Version 1.0.7 Release Notes 3/12/2026
-----------------------------------------
+-------------------------------------------------------------------------------
+🚀 Auto Shop Manager Pro - Changelog v1.0.7 Release Notes 3/12/2026
+
 🚀 New Features
 Supplier Directory System: Built a brand new Supplier management dashboard. Users can now view, add, edit, and delete local parts suppliers using a modern card-based interface with one-click website launching.
 
@@ -135,4 +174,5 @@ Standalone Update Engine: Completely removed the dependency on the bulky Visual 
 
 ⚡ Performance & Stability
 Core System Optimization: Overhauled the underlying data pipeline to significantly reduce memory footprint and speed up database read/write times.
+
 General Bug Fixes: Patched various UI rendering quirks, smoothed out screen-to-screen navigation transitions, and fortified the application's overall stability during extended daily use.
