@@ -1,3 +1,30 @@
+🚀 Auto Shop Pro - Changelog v1.3.0 (The UX & Consolidation Update)
+🧹 UI/UX Polish & Screen Consolidation
+Financial Command Center: Completely merged the FinancialDashboardView and TaxAccountingReportView into a single, highly powerful "Accounting" tab. It now displays high-level KPI cards, raw expense ledgers, and tax breakdowns all dynamically driven by a single date-range selector.
+
+Redundancy Cleanup: Permanently deleted the isolated FinancialDashboardView and VehicleServiceHistoryView to streamline the navigation menu and reduce codebase bloat.
+
+Native Window Controls: Added standard, hover-responsive Minimize ("—") and Close ("✕") buttons to the top-right corner of the main window to match native OS expectations.
+
+Work Order Editor Fixes: * Removed the "spring-loaded" animation from the Tech Notes and Customer Concern boxes, ensuring the "Save" and "Finalize" buttons no longer jump away from the mouse cursor when clicked.
+
+Restored independent mouse-wheel scrolling inside text boxes and DataGrids on the Work Order screen.
+
+🧠 Core Architecture & Networking
+Single Instance Lock (Mutex): Implemented a core lock that prevents users from accidentally launching the software twice on the same computer, eliminating database collision crashes.
+
+Smart Database Routing: Rewrote the Entity Framework connection logic. The Main PC now automatically defaults to C:\ShopManagerShare\ShopManagerDB.db, while Shop Laptops cleanly route over Wi-Fi using the local text file.
+
+License Preservation: Built a raw SQLite extraction tool to safely migrate license keys when databases are moved or restored.
+
+📖 The Built-In Shop Manual
+Interactive Help Dashboard: Added a multi-tab, side-by-side digital manual accessible from the main navigation menu. It runs independently of the main thread, allowing users to read instructions while actively typing on other screens.
+
+1-Click IT Setup Tools: Added intelligent buttons to the Settings screen that auto-generate network config files and instantly open the active database folder in Windows Explorer.
+
+Comprehensive Documentation: Added step-by-step guides for everything from writing a Work Order and logging Expenses, to clearing Windows 10 "Password Protected Sharing" blocks.
+
+---------------------------------------------------------------------
 🚀 Auto Shop Pro - Changelog v1.2.0 (The Documentation & Network Polish Update)
 🧠 Application Stability & Architecture
 Single Instance Lock (Mutex): Implemented a core application lock to prevent multiple instances of Auto Shop Pro from running simultaneously on the same computer, preventing database collisions and memory crashes.
