@@ -1,4 +1,39 @@
 --------------------------------🚀 Auto Shop Pro - Release Notes-------------------------------------
+Update: The "Command Center & QOL" Expansion (v2.4)
+
+📊 Unified Financial Command Center
+Master Accounting Dashboard: Completely redesigned the TaxAccountingReportView into a Tetris-style 4-column grid. It now seamlessly houses Gross Revenue, Total Costs, Net Profit, Tax Liability, Shop Expenses, and Employee Payroll all on one screen.
+
+Independent Reporting Periods: Separated the date filters so you can run a monthly or quarterly Tax/Financial report while simultaneously running a weekly or bi-weekly Payroll report without the dates conflicting.
+
+⚡ Quality of Life (QOL) & Workflow Speed
+1-Click VIN Copier: Added a sleek "📋 Copy VIN" button to the Work Order Editor. With one click, the active vehicle's 17-digit VIN is copied to the Windows clipboard (triggering a success toast), making it effortless to paste into parts catalogs or repair guides.
+
+Smart Customer Search: Upgraded the "Add New Vehicle" screen. The Customer dropdown is now a live-search text box, allowing writers to type a few letters and instantly filter the customer list rather than scrolling.
+
+Streamlined Guide Creation: Built a dedicated AddGuideWindow specifically for logging software like ProDemand, Identifix, and Alldata, keeping the "Service Zone" perfectly organized and free of irrelevant parts-vendor fields.
+
+🪄 The "Teleporter" Auto-Inject System
+Cross-Window Communication: The main application now actively monitors your workflow. If you have a Work Order open in the background, the system enters "Active Ticket" mode.
+
+Auto-Inject Parts: Any part saved from the embedded Supplier Portal (AutoZone, O'Reilly) or the manual Add Part window is now instantly and silently dropped directly onto your active Work Order.
+
+Auto-Inject Labor: Created a brand-new GuidePortalWindow. Writers can pull up a repair guide, type in the required hours and tech skill level, and click "Save"—the labor line is instantly injected onto the active Work Order behind the scenes.
+
+Smart Portal VIN Sharing: The embedded web portals now peek at your active Work Order and display their own "📋 Copy VIN" button at the top of the screen so you never have to close the portal to go hunt for the VIN.
+
+🌐 Embedded Browser Upgrades
+Permanent Session Memory: Overhauled the WebView2 engine to use a permanent, local AppData folder. The portals will now permanently remember your store locations, cart data, and login credentials (even after the app is closed).
+
+Anti-Bot Bypass: Re-engineered the browser's security footprint to bypass strict anti-scraping scripts on major retail sites (like AutoZone) by disabling Edge Tracking Prevention and masking the system as a standard Google Chrome browser.
+
+📚 Documentation & Bug Fixes
+Shop Manual Overhaul: Completely rewrote the built-in Help Manual to document the new Financial Dashboard, Portal systems, Auto-Inject features, and Low-Stock alerts.
+
+Orphan Window Fix: Patched a memory leak where the Help Window and Low Stock Widget would remain floating on the screen if the main application was closed or the user logged out.
+
+
+--------------------------------🚀 Auto Shop Pro - Release Notes-------------------------------------
 Update: The "Workflow Architecture & Smart Alerts" Expansion (v2.3)
 
 🏗️ Complete UI/UX Workflow Restructure
