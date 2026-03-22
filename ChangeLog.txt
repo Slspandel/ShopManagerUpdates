@@ -1,3 +1,23 @@
+--------------------------------🚀 Auto Shop Pro - Release Notes--------------------------------
+Update: The "Security & Workflow" Patch (v2.4.2)
+
+🛡️ Role-Based Security & Permissions
+Technician Work Order Restrictions: Hardened the WorkOrderEditorView against accidental data alteration. Users with the "Technician" role can no longer edit labor descriptions, billed hours, part numbers, or quantities on an active repair order. The "Remove Item" (X) buttons have also been hidden for technicians.
+
+Master Catalog Protection: Technicians can still browse the Parts Inventory and Labor Catalogs to build out their tickets, but the "+ Create New" buttons have been removed from their view. Only Service Writers and Admins can add net-new items to the shop's master database.
+
+✨ Workflow & Quality of Life Features
+Dedicated "Receive Stock" Tool: Added a brand-new, streamlined ReceiveStockWindow to the Inventory dashboard. When the delivery truck arrives, you can now rapidly search for a part and add quantity to your existing stock without risking accidental edits to the part's cost, retail price, or bin location.
+
+Smart Low-Stock Alerts: The background Low Stock Widget has been upgraded. You can now set a part's Minimum Stock Level to 0 to permanently mute alerts for that specific item (perfect for rare or special-order parts you don't want to keep on the shelf).
+
+Diagnostic Status Editing: The Work Order Editor now allows Service Writers and Admins to edit the "Customer Concern / Diagnostic Report" text box while a vehicle is actively in the "In Diagnostic" (Status 5) phase.
+
+🛠️ Bug Fixes & Stability
+Auto-Inject Crash Resolved: Fixed a critical null-reference crash that occurred when manually typing a brand-new part or labor operation into the database with a Work Order open in the background. The teleporter now safely injects the new items without crashing the application.
+
+PDF Engine Conflict Resolved: Fixed an ambiguous reference compiler error caused by the new Excel Import library conflicting with the Shop's PDF generator. Explicitly routed all invoice, authorization, and tech sheet generations to strictly use the QuestPDF engine.
+
 --------------------------------🛠️ Auto Shop Pro - Patch Notes-------------------------------------
 Update: Hotfix v2.4.1
 
