@@ -1,4 +1,32 @@
 --------------------------------🚀 Auto Shop Pro - Release Notes--------------------------------
+Update: The "Shop Floor & Workflow" Patch (v2.5.0)
+
+📦 Inventory & Procurement
+New "Quick Restock" UI: Bypassed the heavy web portal for low-stock alerts. Clicking "Order" on the Low Stock Widget now opens a lightning-fast, dedicated Quick Restock window with a simple + / - toggle to instantly receive parts into your physical inventory.
+
+Low Stock Widget Stability: Re-engineered the background widget's rendering engine. It now features silent crash-protection (to prevent "Database Locked" errors when checking stock at the exact millisecond a Service Writer saves an invoice) and prevents Windows from "ghosting" the widget behind other applications.
+
+👤 Customer & Vehicle Intelligence
+Expanded Customer Database: Upgraded the master Customer profiles to capture deeper data. You can now track Alternate Phone Numbers, Address Line 2 (Apt/Suite), City, State, and Zip Code.
+
+Supercharged Vehicle Dashboard: The Vehicle List screen is no longer just a static list. It is now powered by a highly optimized background query that instantly displays the VIN, Last Date In, and Last Mileage for every vehicle without slowing down the application—giving service writers instant context when a customer calls.
+
+🔧 Labor & Diagnostics Workflow
+Guaranteed Diagnostic Billing: To prevent lost revenue, the system now automatically injects a default 1.0 Hour Diagnostic labor line onto every brand-new Work Order and every Scheduled Appointment Check-In. (This can be easily removed with one click if not needed).
+
+The "Smart" VIN Labor Guide: Labor imported from web portals (ProDemand/AllData) no longer clutters your canned labor catalog. Instead, it silently saves to a proprietary "Smart Guide" tagged to the first 8 digits of the active vehicle's VIN. The next time that specific chassis/engine generation rolls into the bay, its specific labor times will automatically appear at the top of your list.
+
+Catalog Scrub Tool: Added a one-click database tool in Shop Settings to instantly hunt down and purge all old, messy "Diag" entries from your canned labor catalog to keep your dropdowns perfectly clean.
+
+Restored Labor Search: Re-implemented the live-filtering search bar on the Labor & Repair Guides screen.
+
+📋 Active Shop Board & Estimates
+"Saved Estimates" Status: Added a brand-new "6 - Saved Estimate (Hidden)" status. If a customer declines work but plans to return later, changing the ticket to this status will safely store the estimate in the database while completely removing it from the Active Shop Board, keeping your daily pipeline perfectly uncluttered.
+
+Portal Refresh Syncing: Fixed a Windows UI glitch where background selection grids would "fall asleep" and fail to display newly imported parts or labor until the window was manually refreshed.
+
+
+--------------------------------🚀 Auto Shop Pro - Release Notes--------------------------------
 Update: The "Security & Workflow" Patch (v2.4.2)
 
 🛡️ Role-Based Security & Permissions
