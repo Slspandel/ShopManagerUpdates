@@ -1,3 +1,34 @@
+----------------🚀 Auto Shop Pro - Release Notes-----------------
+Update: The "Multi-Tasking & DVI" Update (v2.7.0)
+
+📸 Digital Vehicle Inspections (Image Gallery)
+Visual Work Orders: Service Writers and Technicians can now attach images directly to active Work Orders.
+
+Interactive Thumbnail Gallery: Uploaded images automatically generate a clean, wrapping thumbnail gallery at the bottom of the Work Order. Clicking any thumbnail instantly opens the full-resolution image in the computer's native photo viewer.
+
+Network-Synced Storage: Engineered a dynamic file-routing system. Images are no longer trapped on individual hard drives; they are automatically routed to a hidden WorkOrderImages folder located right next to your shared network database. A picture snapped on a bay computer is instantly visible to the Service Writer at the front desk.
+
+Safe-Delete Protocol: Removing an image from a Work Order silently deletes the file from the network drive to save space, while preventing application crashes if the file is currently locked by the OS.
+
+🌐 B2B Supplier Portal & Multi-Tab Browsing
+Commercial Vendor Upgrade: Shifted the Supplier Portal away from consumer-level retail sites to target dedicated B2B commercial portals (firstcallonline.com, autozonepro.com), entirely bypassing aggressive retail firewalls (Akamai/Cloudflare).
+
+Persistent Shop Logins: Locked the WebView2 engine to a permanent SupplierProfile_Final environment, ensuring the browser remembers the shop's commercial login credentials every morning.
+
+Multi-Tab "Lazy Loading": Completely overhauled the Supplier Portal UI. Replaced the clunky dropdown menu with a sleek "Bookmark Bar." Clicking a vendor dynamically spins up a dedicated browser tab.
+
+Side-by-Side Comparison: Service writers can now open AutoZone and O'Reilly simultaneously, instantly swapping between tabs to compare wholesale costs and delivery times without losing their place.
+
+External Pop-up Catcher: The embedded browser now successfully intercepts "New Tab" requests from commercial vendors (like printable invoices, AllData, or wiring diagrams) and safely routes them to the computer's default Google Chrome/Edge browser for easy viewing across multiple monitors.
+
+🗺️ Work Order Navigation & Workflow
+"Breadcrumb" Back Button: Solved the "stranded" navigation issue when viewing vehicle history. When a user double-clicks an old invoice from within an active Work Order, the app now safely unlocks and saves the active ticket, and places a bright blue "Return to Active Ticket" bookmark button at the top of the history screen.
+
+Seamless Teleportation: One click on the new Back button instantly returns the Service Writer to their active customer, automatically re-securing the database lock without ever needing to use the sidebar.
+
+Namespace Collision Fix: Resolved an underlying compiler conflict between QuestPDF and WPF image rendering engines to ensure printed invoices and screen UI can coexist peacefully.
+
+
 --------------------------------🛠️ Auto Shop Pro - Patch Notes-------------------------------------
 Update: The "JIT Stabilization & Cloaking" Patch (v2.6.1)
 
