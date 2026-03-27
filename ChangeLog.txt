@@ -1,4 +1,39 @@
 ----------------🚀 Auto Shop Pro - Release Notes-----------------
+Update: The "Touchscreen & Tech Workflow" Update (v2.8.0)
+
+👆 Global Touchscreen Optimization (Fat-Finger Proofing)
+Smart Massive Scrollbars: Implemented a global application style that automatically scales all vertical and horizontal scrollbars to a chunky 45px width/height without squishing the UI, making them incredibly easy to grab on bay touchscreens.
+
+Single-Tap Architecture: Completely stripped out double-click requirements across the entire application (Customers, Vehicles, Work Orders, and History grids). Every grid now instantly opens records with a single, responsive screen tap.
+
+Selection Memory Wipe: Engineered a background state-clear that prevents the "Already Selected" trap. Writers and Techs can now tap a ticket, back out, and tap the exact same ticket again without the touchscreen ignoring the input.
+
+Scrollbar Safety Net: Built custom VisualTreeHelper logic into every data grid to ensure that grabbing the new giant scrollbars doesn't accidentally trigger a row-click event and open the wrong ticket.
+
+🛠️ Technician Workflow & Accountability
+"Done" Checkboxes: Added a massive, 1.5x scaled IsCompleted checkbox directly to the Labor Grid on the Work Order Editor.
+
+Real-Time Job Tracking: Technicians can now tap to check off individual labor lines as they finish them, giving the Service Writer at the front desk instant visibility into exactly what stage the vehicle is at.
+
+Tech-Specific Security: Lifted the complete read-only lock on the labor grid for Technicians, but applied surgical column-locks. Techs can only interact with the checkbox, and the system automatically verifies they are only allowed to mark their own assigned jobs as complete.
+
+📚 Repair Guide Portal (ProDemand / AllData Upgrade)
+Multi-Tab Guide Browsing: Replaced the clunky dropdown menu with a sleek "Bookmark Bar" specifically filtered for Repair Guides. Clicking a guide dynamically spins up a dedicated browser tab, allowing Service Writers to have ProDemand and AllData open side-by-side.
+
+Persistent Sessions: Locked the WebView2 engine to a permanent GuideProfile_Final environment. The browser now securely remembers your shop's ProDemand/AllData login credentials and session cookies even after the app closes.
+
+Anti-Bot Stealth Engine: Injected aggressive spoofing scripts to strip out webdriver flags and force a standard Google Chrome User-Agent, preventing aggressive B2B firewalls from flagging the shop as a bot.
+
+Wiring Diagram Pop-up Interceptor: The embedded browser now successfully catches "Print Diagram" or "New Window" requests from ProDemand and safely routes them to the computer's default external browser.
+
+🖥️ Quality of Life & Layout Improvements
+Sticky Financial Sidebar: Completely overhauled the Work Order Editor layout. The Financial Totals, Save, Print, and Finalize buttons have been extracted from the main scroll view and pinned to the top-right of the screen. Service Writers no longer have to scroll to the bottom of massive tickets to see the Grand Total or save their work.
+
+Settings PIN Pad Fix: Added a smart-check to the main navigation sidebar. Clicking the "Settings" button while already inside the Settings dashboard will no longer trigger a redundant Master PIN prompt.
+
+Codebase Cleanup: Successfully stripped out obsolete InventoryListView ghost files to keep the application lightweight and clean.
+
+----------------🚀 Auto Shop Pro - Release Notes-----------------
 Update: The "Multi-Tasking & DVI" Update (v2.7.0)
 
 📸 Digital Vehicle Inspections (Image Gallery)
