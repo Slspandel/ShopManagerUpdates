@@ -1,3 +1,65 @@
+-------------🚀 Release Notes: Auto Shop Pro - Version 3.0--------------
+This major update focuses on drastically improving the speed of the Service Writer workflow, eliminating unnecessary clicks, and bringing a modern, seamless experience to Work Order creation and Just-In-Time (JIT) part ordering.
+
+✨ New Features & Major Improvements
+Seamless Auto-Save Engine (Work Orders)
+
+Background Auto-Save: The Work Order Editor now features a silent background timer that automatically saves progress every 30 seconds for Service Writers.
+
+Save on Exit: Navigating away from a Work Order or closing the app will now automatically save your draft. The "Unsaved Changes" interruption prompts have been entirely removed for a faster, friction-free navigation experience.
+
+Quick Exit Routing: Clicking "Save RO" now automatically closes the editor and routes the user directly back to the Active Shop Board.
+
+JIT Supplier Portal & Smart URLs
+
+One-Click Web Tracking: Parts added from the Supplier Portal now automatically capture the exact URL of the supplier's webpage.
+
+Interactive Parts Grid: A new clickable link icon (🔗) appears next to JIT parts in the Work Order Editor. Clicking it instantly re-opens your default web browser to the exact page where the part was sourced.
+
+Custom Quantities: The Supplier Portal now allows Service Writers to specify the exact quantity needed before injecting the part into the Work Order.
+
+Streamlined Injection: The "Save to New Supplier" fields were removed from the Portal to focus purely on rapid JIT Work Order injection.
+
+Customer & Vehicle Profiles (Modal Redesign)
+
+UI Overhaul: The full-page CustomerProfileView and VehicleHistoryView have been completely deprecated and replaced with sleek, modern popup modals (CustomerDetailsWindow and VehicleDetailsWindow).
+
+Keep Your Context: Service Writers can now open a customer profile, drill into a specific vehicle, and review past Repair Orders without ever losing their place on the main list views.
+
+Cascading Navigation: Clicking an active Work Order from a Vehicle's history popup will now seamlessly close all stacked modals and route you directly to the Work Order Editor.
+
+Smart Vehicle Creation: Clicking "Add Vehicle" from inside a Customer's profile now automatically pre-selects and locks that customer into the dropdown.
+
+🛠️ Workflow Enhancements & UI Tweaks
+Active Shop Board
+
+Added a "➕ New Work Order" button directly to the top of the Active Shop Board, allowing Service Writers to spin up walk-in tickets without navigating to the main Work Order list.
+
+Security: The new button is automatically hidden from Technicians to maintain strict workflow permissions.
+
+Work Order List View
+
+Status Filter Dropdown: Added a powerful new filtering dropdown to easily isolate tickets by status (e.g., showing only "On Hold" or "Estimates").
+
+Saved Estimates: "Saved Estimates" (Status 6) are now accessible via the new dropdown filter and feature a distinct Slate/Gray UI badge.
+
+Smart Sorting: The list is now hard-coded to always sort by CreatedDate descending, ensuring the newest tickets are always at the top.
+
+Labor & Services Panel
+
+Split the old "Add Labor" button into two distinct, high-efficiency buttons:
+
+"📋 Canned Jobs": Opens your local pre-built labor packages.
+
+"+ Labor Guide": Directly launches the Labor Guide Portal for rapid online time lookups.
+
+🐛 Bug Fixes & Code Health
+Resolved a C# compiler error related to dynamic pattern matching in the new modal windows.
+
+Fixed a method overloading conflict between AddPartWindow (Local Inventory) and SupplierPortalWindow (JIT Ordering) so both can safely utilize the InjectPartFromOutside method without crossing data streams.
+
+Fixed database schema mappings by properly establishing the new PartUrl column in the Entity Framework migrations.
+
 ----------------🚀 Auto Shop Pro - Release Notes-----------------
 Update: The "Touch-First & Kanban Scheduling" Update (v2.9.0)
 
