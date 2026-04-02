@@ -1,4 +1,19 @@
-----------------🚀 Auto Shop Pro - Release Notes-----------------
+-------🚀 Release Notes: Auto Shop Pro - Version 3.0.1 (Patch)-------
+This update brings critical quality-of-life UI improvements to the Work Order list, fixes a sorting bug, and adds a strict security trap to protect the invoicing workflow.
+
+🎨 UI & Navigation Enhancements
+Dynamic Status Toggles: The clunky status dropdown on the Work Order List has been completely replaced. You can now filter the board using modern, multi-select toggle "pills" across the top of the grid.
+
+Color-Coded Filtering: The new toggle pills dynamically change color to match their respective statuses, allowing for instant, muscle-memory filtering (e.g., viewing "Estimates" and "In Diagnostic" simultaneously).
+
+Status-Colored Cards: Work Order cards now feature a vibrant border matching their current status color. Hovering over a card slightly thickens the border for a premium, interactive feel.
+
+🐛 Bug Fixes & Logic Adjustments
+Absolute Chronological Sorting: Fixed an issue where multiple tickets created on the same day could sort out of order due to timestamp precision. The grid now sorts strictly by WorkOrderId descending, guaranteeing that the absolute newest tickets always stay at the very top.
+
+Invoice Protection Trap: It is now impossible to manually set a Work Order to "Invoiced" via the status dropdown. The option is grayed out, and if a user attempts to bypass it, the system will block the action, revert the status to "Completed", and remind the user to use the official green "FINALIZE" button. This ensures parts are always properly deducted from inventory and financial records are strictly logged.
+
+----------------🚀 Auto Shop Pro - Version 3.0.0.1 (hotfix)-----------------
 🐛 Bug Fixes & Code Health
 Removed Ivoiced from Status in Work Order Editor. This prevents work orders from being locked by mistake.
 
