@@ -1,3 +1,10 @@
+----------------🚀 Auto Shop Pro - Version 3.0.2.1 (hotfix)-----------------
+🐛 Bug Fixes
+Work Order Creation: Fixed error causing crash when user creates a new work order and clicks a sidebar tab while in the work order editor view without first saving the work order.
+
+📝 Document Creation Fixes
+Invoice, Authorization and Tech sheet: Imporoved layout and added additional information
+
 ----------------🚀 Release Notes: Auto Shop Pro - Version 3.0.2 (Financial Patch)----------------
 This patch focuses entirely on the Financial & Accounting Dashboard, bringing real-time data synchronization and much-needed error correction to the Shop Expense Ledger.
 
